@@ -1,3 +1,49 @@
-.index-title {
-  font-size: 100px;
+section {
+  padding: 80px 0;
+}
+
+.banner {
+  height: 621px;
+  padding: 61px;
+  background: url('../images/banner.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+  @include pad {
+    height: 551px;
+    padding: 0;
+  }
+  
+  @include mobile {
+    background: url('../images/banner-sm.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  h2 {
+    @include mobile {
+      font-size: 28px;
+    }
+  }
+}
+
+.theme-card {
+  position: relative;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include pad {
+    height: 84px;
+  }
+  
+  picture {
+    position: absolute;
+    z-index: -1;
+    
+    img {
+      border-radius: 20px 0 20px;
+    }
+  }
 }

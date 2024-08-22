@@ -8,11 +8,11 @@
 // scss-docs-start gray-color-variables
 $white:    #fff !default;
 $gray-100: #f8f9fa !default;
-$gray-200: #e9ecef !default;
-$gray-300: #dee2e6 !default;
-$gray-400: #ced4da !default;
-$gray-500: #adb5bd !default;
-$gray-600: #6c757d !default;
+$gray-200: #dee2e6 !default; // #e9ecef !default;
+$gray-300: #adb5bd !default; //#dee2e6 !default;
+$gray-400: #6c757d !default;// #ced4da !default;
+$gray-500: #343a40 !default; //#adb5bd !default;
+$gray-600: #212529 !default; //#6c757d !default;
 $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
@@ -176,6 +176,16 @@ $cyan-700: shade-color($cyan, 40%) !default;
 $cyan-800: shade-color($cyan, 60%) !default;
 $cyan-900: shade-color($cyan, 80%) !default;
 
+$primary-100: #fffdf5 !default;
+$primary-200: #fffbe5 !default;
+$primary-300: #e8e3da !default;
+$primary-400: #6e6b67 !default;
+
+$accent-100: #e0efde !default;
+$accent-200: #569573 !default;
+$accent-300: #406c55 !default;
+
+
 $blues: (
   "blue-100": $blue-100,
   "blue-200": $blue-200,
@@ -295,6 +305,7 @@ $cyans: (
   "cyan-800": $cyan-800,
   "cyan-900": $cyan-900
 ) !default;
+
 // fusv-enable
 
 // scss-docs-start theme-color-variables
@@ -310,14 +321,15 @@ $dark:          $gray-900 !default;
 
 // scss-docs-start theme-colors-map
 $theme-colors: (
-  "primary":    $primary,
-  "secondary":  $secondary,
-  "success":    $success,
-  "info":       $info,
-  "warning":    $warning,
-  "danger":     $danger,
+  "primary":    #fffdf5, //$primary,
+  "secondary":  #e0efde, //$secondary,
+  "success":    #2cc585,//$success,
+  "info":       #4a72ff, //$info,
+  "warning":    #ffb054, //$warning,
+  "danger":     #d65f5f, //$danger,
   "light":      $light,
-  "dark":       $dark
+  "dark":       $dark,
+  "accent":     $accent-200
 ) !default;
 // scss-docs-end theme-colors-map
 
@@ -413,8 +425,10 @@ $spacers: (
   1: $spacer * .25,
   2: $spacer * .5,
   3: $spacer,
-  4: $spacer * 1.5,
-  5: $spacer * 3,
+  4: $spacer * 1.25,
+  5: $spacer * 1.5,
+  6: $spacer * 3,
+  7: $spacer * 5
 ) !default;
 // scss-docs-end spacer-variables-maps
 
@@ -544,9 +558,9 @@ $border-color-translucent:    rgba($black, .175) !default;
 // scss-docs-end border-variables
 
 // scss-docs-start border-radius-variables
-$border-radius:               .375rem !default;
+$border-radius:               .75rem !default; // .375rem !default;
 $border-radius-sm:            .25rem !default;
-$border-radius-lg:            .5rem !default;
+$border-radius-lg:            1.25rem !default; // .5rem !default;
 $border-radius-xl:            1rem !default;
 $border-radius-xxl:           2rem !default;
 $border-radius-pill:          50rem !default;
@@ -556,7 +570,7 @@ $border-radius-2xl:           $border-radius-xxl !default; // Deprecated in v5.3
 // fusv-enable
 
 // scss-docs-start box-shadow-variables
-$box-shadow:                  0 .5rem 1rem rgba($black, .15) !default;
+$box-shadow:                  0 .125rem .5rem rgba($black, .08) !default; //0 .5rem 1rem rgba($black, .15) !default;
 $box-shadow-sm:               0 .125rem .25rem rgba($black, .075) !default;
 $box-shadow-lg:               0 1rem 3rem rgba($black, .175) !default;
 $box-shadow-inset:            inset 0 1px 2px rgba($black, .075) !default;
@@ -603,7 +617,7 @@ $aspect-ratios: (
 
 // scss-docs-start font-variables
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-sans-serif:      "Newsreader", "Noto serif TC", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 // stylelint-enable value-keyword-case
 $font-family-base:            var(--#{$prefix}font-sans-serif) !default;
@@ -613,7 +627,7 @@ $font-family-code:            var(--#{$prefix}font-monospace) !default;
 // $font-size-base affects the font size of the body text
 $font-size-root:              null !default;
 $font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
-$font-size-sm:                $font-size-base * .875 !default;
+$font-size-sm:                $font-size-base !default; //$font-size-base * .875 !default;
 $font-size-lg:                $font-size-base * 1.25 !default;
 
 $font-weight-lighter:         lighter !default;
@@ -626,9 +640,9 @@ $font-weight-bolder:          bolder !default;
 
 $font-weight-base:            $font-weight-normal !default;
 
-$line-height-base:            1.5 !default;
-$line-height-sm:              1.25 !default;
-$line-height-lg:              2 !default;
+$line-height-base:            1.2 !default;
+$line-height-sm:              1.2 !default; //1.25 !default;
+$line-height-lg:              1.2 !default ; //2 !default;
 
 $h1-font-size:                $font-size-base * 2.5 !default;
 $h2-font-size:                $font-size-base * 2 !default;
@@ -645,7 +659,7 @@ $font-sizes: (
   3: $h3-font-size,
   4: $h4-font-size,
   5: $h5-font-size,
-  6: $h6-font-size
+  6: $h6-font-size,
 ) !default;
 // scss-docs-end font-sizes
 
@@ -798,12 +812,12 @@ $input-btn-focus-color:         $focus-ring-color !default;
 $input-btn-focus-blur:          $focus-ring-blur !default;
 $input-btn-focus-box-shadow:    $focus-ring-box-shadow !default;
 
-$input-btn-padding-y-sm:      .25rem !default;
-$input-btn-padding-x-sm:      .5rem !default;
+$input-btn-padding-y-sm:      .75rem !default; // .25rem !default;
+$input-btn-padding-x-sm:      1.25rem !default; //.5rem !default;
 $input-btn-font-size-sm:      $font-size-sm !default;
 
-$input-btn-padding-y-lg:      .5rem !default;
-$input-btn-padding-x-lg:      1rem !default;
+$input-btn-padding-y-lg:      1rem !default; // .5rem !default;
+$input-btn-padding-x-lg:      1.5rem !default; // 1rem !default;
 $input-btn-font-size-lg:      $font-size-lg !default;
 
 $input-btn-border-width:      var(--#{$prefix}border-width) !default;
@@ -815,7 +829,7 @@ $input-btn-border-width:      var(--#{$prefix}border-width) !default;
 // For each of Bootstrap's buttons, define text, background, and border color.
 
 // scss-docs-start btn-variables
-$btn-color:                   var(--#{$prefix}body-color) !default;
+$btn-color:                   $white; //var(--#{$prefix}body-color) !default;
 $btn-padding-y:               $input-btn-padding-y !default;
 $btn-padding-x:               $input-btn-padding-x !default;
 $btn-font-family:             $input-btn-font-family !default;
@@ -833,22 +847,22 @@ $btn-font-size-lg:            $input-btn-font-size-lg !default;
 
 $btn-border-width:            $input-btn-border-width !default;
 
-$btn-font-weight:             $font-weight-normal !default;
+$btn-font-weight:             700 !default; //$font-weight-normal !default;
 $btn-box-shadow:              inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075) !default;
 $btn-focus-width:             $input-btn-focus-width !default;
 $btn-focus-box-shadow:        $input-btn-focus-box-shadow !default;
 $btn-disabled-opacity:        .65 !default;
 $btn-active-box-shadow:       inset 0 3px 5px rgba($black, .125) !default;
 
-$btn-link-color:              var(--#{$prefix}link-color) !default;
+$btn-link-color:              $white !default; //var(--#{$prefix}link-color) !default;
 $btn-link-hover-color:        var(--#{$prefix}link-hover-color) !default;
-$btn-link-disabled-color:     $gray-600 !default;
+$btn-link-disabled-color:     $gray-200 !default; //$gray-600 !default;
 $btn-link-focus-shadow-rgb:   to-rgb(mix(color-contrast($link-color), $link-color, 15%)) !default;
 
 // Allows for customizing button radius independently from global border radius
-$btn-border-radius:           var(--#{$prefix}border-radius) !default;
-$btn-border-radius-sm:        var(--#{$prefix}border-radius-sm) !default;
-$btn-border-radius-lg:        var(--#{$prefix}border-radius-lg) !default;
+$btn-border-radius:           100px !default; //var(--#{$prefix}border-radius) !default;
+$btn-border-radius-sm:        100px !default; //var(--#{$prefix}border-radius-sm) !default;
+$btn-border-radius-lg:        100px !default; //var(--#{$prefix}border-radius-lg) !default;
 
 $btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
 
@@ -886,39 +900,39 @@ $input-padding-y:                       $input-btn-padding-y !default;
 $input-padding-x:                       $input-btn-padding-x !default;
 $input-font-family:                     $input-btn-font-family !default;
 $input-font-size:                       $input-btn-font-size !default;
-$input-font-weight:                     $font-weight-base !default;
+$input-font-weight:                     600; //$font-weight-base !default;
 $input-line-height:                     $input-btn-line-height !default;
 
-$input-padding-y-sm:                    $input-btn-padding-y-sm !default;
-$input-padding-x-sm:                    $input-btn-padding-x-sm !default;
-$input-font-size-sm:                    $input-btn-font-size-sm !default;
+$input-padding-y-sm:                    .75rem; // $input-btn-padding-y-sm !default;
+$input-padding-x-sm:                    1rem; // $input-btn-padding-x-sm !default;
+$input-font-size-sm:                    16px; //$input-btn-font-size-sm !default;
 
-$input-padding-y-lg:                    $input-btn-padding-y-lg !default;
-$input-padding-x-lg:                    $input-btn-padding-x-lg !default;
-$input-font-size-lg:                    $input-btn-font-size-lg !default;
+$input-padding-y-lg:                    .75rem; //$input-btn-padding-y-lg !default;
+$input-padding-x-lg:                    1rem; //$input-btn-padding-x-lg !default;
+$input-font-size-lg:                    16px; //$input-btn-font-size-lg !default;
 
-$input-bg:                              var(--#{$prefix}body-bg) !default;
-$input-disabled-color:                  null !default;
-$input-disabled-bg:                     var(--#{$prefix}secondary-bg) !default;
-$input-disabled-border-color:           null !default;
+$input-bg:                              $gray-100; //var(--#{$prefix}body-bg) !default;
+$input-disabled-color:                  $gray-300 !default;
+$input-disabled-bg:                     $gray-100; //var(--#{$prefix}secondary-bg) !default;
+$input-disabled-border-color:           $gray-100; //null !default;
 
-$input-color:                           var(--#{$prefix}body-color) !default;
-$input-border-color:                    var(--#{$prefix}border-color) !default;
+$input-color:                           $gray-500; //var(--#{$prefix}body-color) !default;
+$input-border-color:                    $gray-100; //var(--#{$prefix}border-color) !default;
 $input-border-width:                    $input-btn-border-width !default;
 $input-box-shadow:                      var(--#{$prefix}box-shadow-inset) !default;
 
-$input-border-radius:                   var(--#{$prefix}border-radius) !default;
-$input-border-radius-sm:                var(--#{$prefix}border-radius-sm) !default;
-$input-border-radius-lg:                var(--#{$prefix}border-radius-lg) !default;
+$input-border-radius:                   0; //var(--#{$prefix}border-radius) !default;
+$input-border-radius-sm:                0; //var(--#{$prefix}border-radius-sm) !default;
+$input-border-radius-lg:                0; //var(--#{$prefix}border-radius-lg) !default;
 
-$input-focus-bg:                        $input-bg !default;
-$input-focus-border-color:              tint-color($component-active-bg, 50%) !default;
-$input-focus-color:                     $input-color !default;
+$input-focus-bg:                        $gray-100; //$input-bg !default;
+$input-focus-border-color:              $gray-100; //tint-color($component-active-bg, 50%) !default;
+$input-focus-color:                     $gray-500; //$input-color !default;
 $input-focus-width:                     $input-btn-focus-width !default;
-$input-focus-box-shadow:                $input-btn-focus-box-shadow !default;
+$input-focus-box-shadow:                none; //$input-btn-focus-box-shadow !default;
 
-$input-placeholder-color:               var(--#{$prefix}secondary-color) !default;
-$input-plaintext-color:                 var(--#{$prefix}body-color) !default;
+$input-placeholder-color:               $gray-300; //var(--#{$prefix}secondary-color) !default;
+$input-plaintext-color:                 $gray-500; //var(--#{$prefix}body-color) !default;
 
 $input-height-border:                   calc(#{$input-border-width} * 2) !default; // stylelint-disable-line function-disallowed-list
 
@@ -988,8 +1002,8 @@ $form-switch-checked-bg-position: right center !default;
 // scss-docs-end form-switch-variables
 
 // scss-docs-start input-group-variables
-$input-group-addon-padding-y:           $input-padding-y !default;
-$input-group-addon-padding-x:           $input-padding-x !default;
+$input-group-addon-padding-y:           .75rem; // $input-padding-y !default;
+$input-group-addon-padding-x:           1.25rem; //$input-padding-x !default;
 $input-group-addon-font-weight:         $input-font-weight !default;
 $input-group-addon-color:               $input-color !default;
 $input-group-addon-bg:                  var(--#{$prefix}tertiary-bg) !default;
@@ -1157,10 +1171,10 @@ $zindex-levels: (
 
 // scss-docs-start nav-variables
 $nav-link-padding-y:                .5rem !default;
-$nav-link-padding-x:                1rem !default;
-$nav-link-font-size:                null !default;
-$nav-link-font-weight:              null !default;
-$nav-link-color:                    var(--#{$prefix}link-color) !default;
+$nav-link-padding-x:                1.25rem !default; // 1rem !default;
+$nav-link-font-size:                $font-size-base !default;
+$nav-link-font-weight:              700 !default;
+$nav-link-color:                    $gray-500 !default; //var(--#{$prefix}link-color) !default;
 $nav-link-hover-color:              var(--#{$prefix}link-hover-color) !default;
 $nav-link-transition:               color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out !default;
 $nav-link-disabled-color:           var(--#{$prefix}secondary-color) !default;
@@ -1187,10 +1201,10 @@ $nav-underline-link-active-color:   var(--#{$prefix}emphasis-color) !default;
 // Navbar
 
 // scss-docs-start navbar-variables
-$navbar-padding-y:                  $spacer * .5 !default;
+$navbar-padding-y:                  $spacer * 2.25; // $spacer * .5 !default;
 $navbar-padding-x:                  null !default;
 
-$navbar-nav-link-padding-x:         .5rem !default;
+$navbar-nav-link-padding-x:         1.25rem !default; //.5rem !default;
 
 $navbar-brand-font-size:            $font-size-lg !default;
 // Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
