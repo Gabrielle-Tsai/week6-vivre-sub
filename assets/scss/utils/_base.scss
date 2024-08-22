@@ -66,6 +66,7 @@ img {
 
 .btn {
     letter-spacing: .1em;
+    width: fit-content;
 }
 
 .lp-1 {
@@ -74,4 +75,42 @@ img {
 
 .lp-2 {
     letter-spacing: .05em;
+}
+
+.swiper-pagination {
+    width: 232px;
+    display: flex;
+    justify-content: space-between;
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 80px;
+        height: 1px;
+        background: $gray-400;
+        bottom: 15px;
+        transform: translateX(76px);
+    }
+}
+
+.swiper-prev, .swiper-next {
+    border: 1px solid $gray-400;
+    color: $gray-400;
+    padding: .25rem 1rem;
+}
+
+.swiper-navigation {
+    transform: translateY(-56px);
+
+    @include desktop-lg {
+        transform: unset;
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.swiper-pagination {
+    position: static;
 }

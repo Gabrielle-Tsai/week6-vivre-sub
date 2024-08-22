@@ -1,5 +1,9 @@
 section {
   padding: 80px 0;
+
+  @include pad {
+    padding: 48px 0;
+  }
 }
 
 .banner {
@@ -27,28 +31,15 @@ section {
   }
 }
 
-.theme-card {
-  position: relative;
-  height: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  @include pad {
-    height: 84px;
-  }
-  
-  picture {
-    position: absolute;
-    z-index: -1;
-    
-    img {
-      border-radius: 20px 0 20px;
-    }
-  }
+.theme .card img {
+  border-radius: 20px 0 20px;
 }
 
-.article .card {
-  height: 432px;
+.article .swiper-slide .card {
   border-bottom: 1px solid $gray-500;
+
+  img {
+    height: 192px;
+    object-fit: cover;
+  }
 }
