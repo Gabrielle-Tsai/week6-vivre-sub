@@ -43,3 +43,42 @@ section {
     object-fit: cover;
   }
 }
+
+.promotion .container {
+  position: relative;
+
+  ul {
+    list-style: none;
+    
+    li {
+      font-weight: 600;
+      line-height: 1.5;
+      display: flex;
+
+      i {
+        font-size: 24px;
+        line-height: 1;
+      }
+    }
+  }
+
+  .bg-1 {
+    position: absolute;
+    width: 217px;
+    bottom: -88px;
+    left: 0;
+  }
+
+  .bg-2 {
+    position: absolute;
+    width: 300px;
+    bottom: -88px;
+    right: 0;
+
+    @include mobile {
+      width: 160px;
+      right: -48px;
+      bottom: -56px;
+    }
+  }
+}

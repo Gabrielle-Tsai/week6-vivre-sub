@@ -100,6 +100,7 @@ img {
 }
 
 .swiper-navigation {
+    // position: absolute;
     transform: translateY(-56px);
 
     @include desktop-lg {

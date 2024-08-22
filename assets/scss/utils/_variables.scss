@@ -316,7 +316,7 @@ $info:          $cyan !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $gray-100 !default;
-$dark:          $gray-900 !default;
+$dark:          $gray-500 !default;
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
@@ -330,6 +330,8 @@ $theme-colors: (
   "light":      $light,
   "dark":       $dark,
   "accent":     $accent-200,
+  "gray-400":   $gray-400,
+  "primary-200": $primary-200,
   "primary-300": $primary-300,
   "primary-400": $primary-400
 ) !default;
@@ -1370,7 +1372,7 @@ $card-cap-padding-x:                $card-spacer-x !default;
 $card-cap-bg:                       rgba(var(--#{$prefix}body-color-rgb), .03) !default;
 $card-cap-color:                    null !default;
 $card-height:                       100%; //null !default;
-$card-color:                        $gray-400; //null !default;
+$card-color:                        null !default;
 $card-bg:                           transparent; //var(--#{$prefix}body-bg) !default;
 $card-img-overlay-padding:          $spacer !default;
 $card-group-margin:                 $grid-gutter-width * .5 !default;
