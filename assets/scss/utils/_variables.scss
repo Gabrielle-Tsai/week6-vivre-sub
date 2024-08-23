@@ -330,6 +330,7 @@ $theme-colors: (
   "light":      $light,
   "dark":       $dark,
   "accent":     $accent-200,
+  "accent-100": $accent-100,
   "gray-400":   $gray-400,
   "primary-200": $primary-200,
   "primary-300": $primary-300,
@@ -1597,23 +1598,23 @@ $progress-bar-transition:           width .6s ease !default;
 // List group
 
 // scss-docs-start list-group-variables
-$list-group-color:                  var(--#{$prefix}body-color) !default;
-$list-group-bg:                     var(--#{$prefix}body-bg) !default;
-$list-group-border-color:           var(--#{$prefix}border-color) !default;
-$list-group-border-width:           var(--#{$prefix}border-width) !default;
-$list-group-border-radius:          var(--#{$prefix}border-radius) !default;
+$list-group-color:                  $gray-600; //var(--#{$prefix}body-color) !default;
+$list-group-bg:                     $white; //var(--#{$prefix}body-bg) !default;
+$list-group-border-color:           $white; //var(--#{$prefix}border-color) !default;
+$list-group-border-width:           0; // var(--#{$prefix}border-width) !default;
+$list-group-border-radius:          0; //var(--#{$prefix}border-radius) !default;
 
-$list-group-item-padding-y:         $spacer * .5 !default;
+$list-group-item-padding-y:         $spacer; // $spacer * .5 !default;
 $list-group-item-padding-x:         $spacer !default;
 // fusv-disable
 $list-group-item-bg-scale:          -80% !default; // Deprecated in v5.3.0
 $list-group-item-color-scale:       40% !default; // Deprecated in v5.3.0
 // fusv-enable
 
-$list-group-hover-bg:               var(--#{$prefix}tertiary-bg) !default;
-$list-group-active-color:           $component-active-color !default;
-$list-group-active-bg:              $component-active-bg !default;
-$list-group-active-border-color:    $list-group-active-bg !default;
+$list-group-hover-bg:               $accent-100; //var(--#{$prefix}tertiary-bg) !default;
+$list-group-active-color:           $gray-600; //$component-active-color !default;
+$list-group-active-bg:              $accent-100; //$component-active-bg !default;
+$list-group-active-border-color:    $white; //$list-group-active-bg !default;
 
 $list-group-disabled-color:         var(--#{$prefix}secondary-color) !default;
 $list-group-disabled-bg:            $list-group-bg !default;

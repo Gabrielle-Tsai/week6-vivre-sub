@@ -32,3 +32,10 @@ const swiper = new Swiper('.article-swiper', {
     }
   }
 });
+
+const hotSwiper = new Swiper('.hots-swiper', {
+  direction: 'horizontal',
+  loop: true,
+  spaceBetween: 24,
+  hashNavigation: true
+})
