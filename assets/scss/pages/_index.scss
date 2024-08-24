@@ -91,6 +91,29 @@ section {
   list-style: disc;
 }
 
-.everybody h2 {
+.everybody h2,
+.lifestyle h2 {
   margin-bottom: 40px;
+
+  @include mobile {
+    margin-bottom: 24px;
+  }
+}
+
+.lifestyle h3 {
+  @include mobile {
+    font-size: 40px !important;
+  }
+}
+
+.lifestyle .card img {
+  height: 192px;
+  object-fit: cover;
+}
+
+.lifestyle .card h5 {
+  @include mobile {
+    font-size: 1rem;
+    font-weight: 700;
+  }
 }
