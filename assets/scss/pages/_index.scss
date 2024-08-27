@@ -91,29 +91,62 @@ section {
   list-style: disc;
 }
 
-.everybody h2,
-.lifestyle h2 {
-  margin-bottom: 40px;
-
-  @include mobile {
-    margin-bottom: 24px;
-  }
-}
-
+// 品味生活
 .lifestyle h3 {
   @include mobile {
     font-size: 40px !important;
   }
 }
 
-.lifestyle .card img {
-  height: 192px;
-  object-fit: cover;
+.lifestyle .card {
+  img {
+    height: 192px;
+    object-fit: cover;
+  }
+
+  h5 {
+    @include mobile {
+      font-size: 1rem;
+      font-weight: 700;
+    }
+  }
+
+  li {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
 }
 
-.lifestyle .card h5 {
-  @include mobile {
-    font-size: 1rem;
-    font-weight: 700;
+// subscription
+.sub-swiper .swiper-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+
+  .swiper-slide {
+    width: 50%;
+    padding: 20px 12px;
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  .swiper-slide:nth-child(1),
+  .swiper-slide:nth-child(3) {
+    transform: translateY(32px);
+
+    @include pad {
+      transform: unset;
+    }
+  }
+
+  .swiper-slide:nth-child(2),
+  .swiper-slide:nth-child(4) {
+    transform: translateY(-32px);
+
+    @include pad {
+      transform: unset;
+    }
   }
 }

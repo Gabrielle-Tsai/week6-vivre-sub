@@ -1,0 +1,9 @@
+.tag {
+  border-radius: $border-radius-sm;
+  padding: $spacer * .25 $spacer * .5;
+  letter-spacing: .1em;
+  font-weight: 700;
+  margin-right: $spacer * .75;
+  color: $primary-400;
+  background-color: $primary-300;
+}
