@@ -4,16 +4,6 @@ img {
     height: auto;
 }
 
-.fs-7 {
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.05em;
-    font-weight: 700;
-}
-
-.align-sub {
-    vertical-align: sub !important;
-}
 
 .btn-accent:hover {
     background: $accent-300;
@@ -44,12 +34,6 @@ img {
     }
 }
 
-.w-lg-fc {
-    @media (min-width: 992px) {
-        width: fit-content !important;
-    }
-}
-
 .btn-lg {
     height: 56px;
     padding: 12px 20px;
@@ -71,13 +55,6 @@ img {
     width: fit-content;
 }
 
-.lp-1 {
-    letter-spacing: .1em;
-}
-
-.lp-2 {
-    letter-spacing: .05em;
-}
 
 .swiper-pagination {
     width: 232px;
@@ -126,10 +103,4 @@ img {
     color: $gray-400;
     text-decoration: none;
     font-weight: 600;
-}
-
-.ellipsis {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
 }

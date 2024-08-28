@@ -1,0 +1,30 @@
+.fs-7 {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+}
+
+.align-sub {
+    vertical-align: sub !important;
+}
+
+.w-lg-fc {
+    @media (min-width: 992px) {
+        width: fit-content !important;
+    }
+}
+
+.lp-1 {
+    letter-spacing: .1em;
+}
+
+.lp-2 {
+    letter-spacing: .05em;
+}
+
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

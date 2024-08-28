@@ -2,7 +2,8 @@
 @import './utils/variables';
 @import "bootstrap";
 @import './utils/mixin';
-@import "./utils/base";
+@import './utils/helpers';
+@import "./base/base";
 
 @import './components/tags';
 @import './components/further-reading';
