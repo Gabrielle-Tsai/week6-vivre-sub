@@ -6,4 +6,9 @@
   margin-right: $spacer * .75;
   color: $primary-400;
   background-color: $primary-300;
+
+  @include mobile {
+    font-size: 0.75rem;
+    margin-right: 10px;
+  }
 }

@@ -1,8 +1,8 @@
 .content-picture {
   height: 454px;
-}
+  object-fit: cover;
 
-.further-reading .swiper-wrapper {
-  max-width: 100%;
-  overflow: hidden;
+  @include mobile {
+    height: 240px;
+  }
 }

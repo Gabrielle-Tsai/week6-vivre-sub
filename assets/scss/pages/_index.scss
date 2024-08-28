@@ -87,6 +87,21 @@ section {
   padding: 40px;
 }
 
+.everybody .swiper-slide img {
+  height: 157px;
+  object-fit: cover;
+}
+
+.everybody .swiper-slide li {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  @include mobile {
+    font-weight: 600;
+  }
+}
+
 .everybody .list-group {
   list-style: disc;
 }
@@ -120,8 +135,7 @@ section {
 
 // subscription
 .sub-swiper .swiper-wrapper {
-  display: flex;
-  flex-wrap: wrap;
+  padding: 32px 0;
 
   .swiper-slide {
     width: 50%;

@@ -46,6 +46,7 @@ const readSwiper = new Swiper('.read-swiper', {
   breakpoints: {
     375: {
       slidesPerView: 1,
+      height: 419,
     },
     768: {
       grid: {
@@ -55,4 +56,19 @@ const readSwiper = new Swiper('.read-swiper', {
     }
   },
   spaceBetween: 24
+})
+
+const subSwiper = new Swiper('.sub-swiper', {
+  direction: 'horizontal',
+  loop: true,
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      grid: {
+        fill: 'row',
+        rows: 2
+      }
+    }
+  }
 })
