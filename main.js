@@ -39,3 +39,20 @@ const hotSwiper = new Swiper('.hots-swiper', {
   spaceBetween: 24,
   hashNavigation: true
 })
+
+const readSwiper = new Swiper('.read-swiper', {
+  direction: 'horizontal',
+  loop: false,
+  breakpoints: {
+    375: {
+      slidesPerView: 1,
+    },
+    768: {
+      grid: {
+        fill: 'column',
+        rows: 3,
+      },
+    }
+  },
+  spaceBetween: 24
+})
